@@ -5,6 +5,16 @@ from ralphlists import *
 from ralphprompts import *
 import inflect
 
+def single_line(file):
+    input_file = file
+    line_number = random.randint(1,len(file))
+    with open(input_file, 'r') as f:
+        lines = f.readlines()
+        line = lines[line_number - 1].strip()
+
+    # Print the extracted line
+    return(line)
+
 
 p = inflect.engine()
 def pluralize(x):
@@ -28,6 +38,8 @@ def text_cleaner(text):
 #       text = re.sub(string, text)
 #   text = " ".join(text.split())
 #   return text
+
+
 
 def readfile(file_name):
     with open(file_name) as f:
