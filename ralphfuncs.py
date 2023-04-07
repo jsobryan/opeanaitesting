@@ -1,8 +1,6 @@
 import re
 import random
 import nltk
-from ralphlists import *
-from ralphprompts import *
 import inflect
 
 def single_line(file):
